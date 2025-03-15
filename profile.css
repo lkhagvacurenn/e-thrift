@@ -1,0 +1,187 @@
+:root{
+    --profile-img-size:50px;
+    --rate-svg-size:16px;
+    --contact-svg-size:16px;
+    --line-color:blue;
+    --username-color:rgb(227, 221, 221);
+    --card-color:rgb(233, 227, 227);
+    --card-text-color:black;
+    --primary-color:rgb(164, 78, 78);
+
+
+
+}
+@media (prefers-color-scheme:dark) {
+    :root{
+        --line-color:lightblue;
+    }    
+}
+
+.container{
+    max-width: 1500px;
+    margin:30px auto;
+}
+.profile-section{
+    margin:0 20px;
+    max-width: 600px;
+}
+.profile{
+    display:flex;
+    gap:10px;
+    height: 100px;
+    align-items: stretch;
+}
+.profile-pic{
+    aspect-ratio: 1;
+    height:100%;
+    object-fit: cover;
+    border-radius: 50%; 
+    border:1px solid var(--line-color);
+}
+.profile-info{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /*line urt bolgono */
+}
+.full-name{
+    font-weight: bolder;
+}
+.username{
+    font-weight: lighter;
+    font-size: 12px;
+    color:var(--username-color);
+}
+.rate{
+    display: flex;
+    margin-top: 8px;
+    height: 100%;
+    align-items: center;
+    gap:8px;
+    border-top:1px solid var(--line-color);
+}
+.rate-icon{
+    display: flex;
+    border-left:1px solid var(--line-color);
+}
+.rate-icon svg{
+    padding-left:5px;
+    width: var(--rate-svg-size);
+    height:auto ;
+}
+.bio{
+    margin-top: 10px;
+}
+.contact{
+    display: flex;
+    gap:5px;
+}
+.contact svg{
+    width: var(--contact-svg-size);
+    height: auto;
+}
+.post{
+    margin:10px 20px;
+    border-top:1px solid var(--line-color);
+    justify-content: center;
+}
+.tabs {
+    width: 100%;
+  }
+  
+  .tab-titles {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .tab-title {
+    flex: 1;
+    text-align: center;
+    padding: 10px 0;
+    cursor: pointer;
+  }
+  .tab-title.active{
+    border-bottom: 2px solid var(--line-color);
+  }
+  .tab-title:hover {
+    border-bottom: 2px solid #d8e5f1;
+  }
+  
+  .post-content{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);;
+    gap: 20px;
+    padding-top: 30px;
+  }
+  .post-card{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 10px;
+    background-color: var(--card-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    aspect-ratio: 1;
+  }
+  .post-card img{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+  }
+
+.card-buttom{
+    display: flex;
+    height: 20%;
+    background-color: inherit;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+.post-info {
+    background-color: inherit;
+}
+
+ .post-info h4 {
+    background-color: inherit;
+    font-size: clamp(0.7rem, 0.9rem, 1rem);
+    color: var(--card-text-color);
+}
+.post-info h5{
+    background-color: inherit;
+    font-size: clamp(0.6rem, 0.8rem, 9rem);
+    color: var(--card-text-color);
+}
+ .post-card svg{
+    background-color: inherit;
+    fill:var(--card-text-color);
+    width: 16px;
+    height: auto;
+}
+svg:hover{
+    fill:var(--primary-color);
+}
+.post-card:hover {
+    transform: scale(1.05);
+}
+
+
+  @media (max-width: 1024px) {
+    .post-content {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .post-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .post-info h4 {
+        font-size: clamp(0.5rem, 0.6rem, 7rem);
+    }
+    .post-info h5 {
+        font-size: clamp(0.4rem, 0.5rem, 6rem);
+    }
+}
+
+  

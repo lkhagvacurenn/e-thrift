@@ -14,7 +14,7 @@ Ene css-d zuwhun buh huudasand hamaatai zuil oruulna
     --card-color:rgb(233, 227, 227);
     --hover-color:#2980B9;
     --navbar-color:#F8F9FA;
-    --svg-size:25px;
+    --pro-svg-size:25px;
 }
 /*Dark mode*/
 @media(prefers-color-scheme:dark){
@@ -84,14 +84,13 @@ a{
 }
 
 
-
 .icons  {
     display: flex;
     gap: 20px;
     font-size: 1.5rem;
 }
-svg{
-    width: var(--svg-size);
+.icons a svg{
+    width: var(--pro-svg-size);
     height: auto;
 }
 .icons svg:hover {
@@ -169,3 +168,5 @@ li{
         }
     }
 }
+
+

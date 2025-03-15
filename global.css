@@ -1,0 +1,171 @@
+/*Hello you guys, Ungu, text-font, font size bugdiig ni huwisagch bolgoj zarlaad ashiglaarai.
+Ene css-d zuwhun buh huudasand hamaatai zuil oruulna
+*/
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700&display=swap');
+/*Light mode*/
+:root{
+    --font-family: 'Manrope', sans-serif;
+    --line-height: 1.5;
+    --letter-spacing: 0.5px;
+    --word-spacing: 2px;
+    --primary-color:rgb(164, 78, 78);
+    --text-color:black;
+    --line-color:blue;
+    --card-color:rgb(233, 227, 227);
+    --hover-color:#2980B9;
+    --navbar-color:#F8F9FA;
+    --svg-size:25px;
+}
+/*Dark mode*/
+@media(prefers-color-scheme:dark){
+    :root{
+        --background-color:black;
+        --text-color:white;
+        --line-color:lightblue;
+        --hover-color:#4AB8F1;
+        --navbar-color:#1E1E1E;
+    }
+}
+
+* {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color:var(--text-color);
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing);
+}
+a{
+    background-color: inherit;
+    text-decoration: none;
+}
+
+.header {
+    width: 100%;
+    position: sticky;
+}
+.top-header{
+    display: flex;
+    justify-content: space-between;
+    align-items:baseline;
+    border-bottom: 1px solid var(--line-color);
+    padding: 10px 20px;
+}
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+.search-box {
+    display: flex;
+    flex: 1;
+    margin: 0 20px;
+    position: relative;
+    border-radius: 20px;
+    border: 1px solid var(--line-color);
+    max-width: 600px;
+    height: 35px;
+    align-items: center;
+}
+.search-box svg{
+    margin-left: 10px;
+    color: var(--card-color);
+}
+.search-box input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding-left: 5px;  
+    border-radius: 20px;
+}
+.search-box input:focus{
+    outline: none;
+}
+
+
+
+.icons  {
+    display: flex;
+    gap: 20px;
+    font-size: 1.5rem;
+}
+svg{
+    width: var(--svg-size);
+    height: auto;
+}
+.icons svg:hover {
+   fill:var(--hover-color);
+}
+.category{
+    height: 3rem;
+    background-color: var(--navbar-color);
+
+}
+
+.category-list {
+    background-color: inherit;
+    display: flex;
+    max-width: 400px;
+    height: 100%;
+    position: relative;
+}
+li{
+    list-style: none;
+}
+
+.cat-item {
+    background-color: inherit;
+    flex-grow: 1;
+    height: 100%;
+    cursor: pointer; 
+    text-align: center;
+    align-content: center;  
+
+}
+.cat-item:hover{
+    background-color: var(--hover-color);
+}
+.cat-item:hover .dropdown {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.dropdown {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    border: 1px solid var(--line-color);
+    width: 100%;
+    list-style: none;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+    background-color: var(--navbar-color);
+}
+.dropdown li {
+    background-color: inherit;
+    padding: 8px 15px;
+    cursor: pointer;
+    text-align:left;
+}
+.dropdown li:hover {
+    background: var(--hover-color);
+}
+/*Mobile version*/
+@media (max-width: 768px) {
+    .top-header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    /*I could not solve this*/
+    .search-box input:focus{
+        width: 100vw;
+        padding: 0 10px;
+        .logo {
+            display: none;
+        }
+        .icons{
+            display: none;
+        }
+    }
+}

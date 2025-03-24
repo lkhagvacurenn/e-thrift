@@ -168,5 +168,125 @@ li{
         }
     }
 }
+main{
+    width:100%;
+    height: auto;
+}
+
+.container {
+    position: relative;
+}
+
+.main-img {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+}
+
+.left-img-container, .right-img-container {
+    background-color: transparent;
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    top: 5%;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left-img-container {
+    left: 10%;
+}
+
+.right-img-container {
+    right: 10%;
+}
+
+.left-img, .right-img {
+    background-color: transparent;
+    width: 100%;
+    height: 100%
+}
+
+
+.left-button, .right-button {
+    position: relative;
+    bottom: 10%;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.left-button:hover, .right-button:hover {
+    background-color: var(--hover-color);
+}
+
+.left-img-container:hover, .right-img-container:hover {
+    transform: scale(1.05);
+}
+
+.product-content{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 30px;
+}
+.product-card{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 10px;
+    background-color: var(--card-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    aspect-ratio: 1;
+}
+.product-card img{
+    width: 100%;
+    height: 85%;
+    object-fit: cover;
+}
+.product-button{
+    display: flex;
+    height: 15%;
+    background-color: inherit;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+.product-name{
+    background-color: inherit;
+}
+.product-name h3{
+    background-color: inherit;
+    font-size: clamp(0.7rem, 0.9rem, 1rem);
+    color: black;
+    font-weight: bold;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+@media (max-width: 1024px){
+    .product-content{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media (max-width: 768px) {
+    .post-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .post-info h3 {
+        font-size: clamp(0.5rem, 0.6rem, 7rem);
+    }
+}
 
 

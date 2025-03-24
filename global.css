@@ -12,6 +12,7 @@ Ene css-d zuwhun buh huudasand hamaatai zuil oruulna
     --text-color:black;
     --line-color:blue;
     --card-color:rgb(233, 227, 227);
+    --card-text-color:black;
     --hover-color:#2980B9;
     --navbar-color:#F8F9FA;
     --pro-svg-size:25px;
@@ -36,6 +37,11 @@ Ene css-d zuwhun buh huudasand hamaatai zuil oruulna
     line-height: var(--line-height);
     letter-spacing: var(--letter-spacing);
 }
+body {
+    background: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
 a{
     background-color: inherit;
     text-decoration: none;
@@ -44,6 +50,7 @@ a{
 .header {
     width: 100%;
     position: sticky;
+    z-index: 1000;
 }
 .top-header{
     display: flex;
@@ -108,7 +115,9 @@ a{
     max-width: 400px;
     height: 100%;
     position: relative;
+
 }
+
 li{
     list-style: none;
 }
@@ -150,6 +159,165 @@ li{
 .dropdown li:hover {
     background: var(--hover-color);
 }
+
+.hero-section {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.hero-box {
+    flex: 1 1 50%;
+    max-height: 70vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.hero-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hero-box button {
+    position: absolute;
+    bottom: 2rem;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.hero-box button:hover {
+    background-color: var(--hover-color);
+}
+
+/* Shop by Category */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+}
+.category-card {
+    background: var(--card-color);
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+.category-card h3 {
+    font-size: 1.2rem;
+    background-color: inherit;
+    color: var(--card-text-color);
+}
+.category-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.category-card:hover {
+    transform: scale(1.03);
+}
+
+/* Price Slider */
+.price-slider-container {
+    margin: 2rem;
+}
+.range-labels {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.range-value {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.price-slider {
+    width: 100%;
+    accent-color: var(--primary-color);
+}
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.site-footer {
+    padding: 3rem 1rem;
+    color: var(--text-color);
+    font-size: 0.95rem;
+    border-top: 1px solid var(--line-color);
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  
+  .footer-column h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-column ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-column ul li a:hover {
+    color: var(--hover-color);
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-color);
+    opacity: 0.7;
+  }
+  
+  .social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .social-icons a svg:hover {
+    fill: var(--hover-color);
+  }
+
+  
+
+@media (max-width: 1024px){
+    .product-container{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
 /*Mobile version*/
 @media (max-width: 768px) {
     .top-header {
@@ -167,126 +335,20 @@ li{
             display: none;
         }
     }
-}
-main{
-    width:100%;
-    height: auto;
-}
-
-.container {
-    position: relative;
-}
-
-.main-img {
-    width: 100%;
-    height: 80vh;
-    object-fit: cover;
-}
-
-.left-img-container, .right-img-container {
-    background-color: transparent;
-    position: absolute;
-    width: 400px;
-    height: 500px;
-    top: 5%;
-    transition: transform 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.left-img-container {
-    left: 10%;
-}
-
-.right-img-container {
-    right: 10%;
-}
-
-.left-img, .right-img {
-    background-color: transparent;
-    width: 100%;
-    height: 100%
-}
-
-
-.left-button, .right-button {
-    position: relative;
-    bottom: 10%;
-    padding: 10px 20px;
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.left-button:hover, .right-button:hover {
-    background-color: var(--hover-color);
-}
-
-.left-img-container:hover, .right-img-container:hover {
-    transform: scale(1.05);
-}
-
-.product-content{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
-    padding: 30px;
-}
-.product-card{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    border-radius: 10px;
-    background-color: var(--card-color);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-    aspect-ratio: 1;
-}
-.product-card img{
-    width: 100%;
-    height: 85%;
-    object-fit: cover;
-}
-.product-button{
-    display: flex;
-    height: 15%;
-    background-color: inherit;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10px;
-}
-.product-name{
-    background-color: inherit;
-}
-.product-name h3{
-    background-color: inherit;
-    font-size: clamp(0.7rem, 0.9rem, 1rem);
-    color: black;
-    font-weight: bold;
-}
-
-.product-card:hover {
-    transform: scale(1.05);
-}
-@media (max-width: 1024px){
-    .product-content{
-        grid-template-columns: repeat(4, 1fr);
+    .hero-box {
+        flex: 1 1 100%;
+        max-height: 60vh;
     }
-}
-@media (max-width: 768px) {
-    .post-content {
+    .product-container {
         grid-template-columns: repeat(2, 1fr);
     }
-    .post-info h3 {
-        font-size: clamp(0.5rem, 0.6rem, 7rem);
-    }
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    
+      .footer-column {
+        width: 100%;
+      }
 }
-
-

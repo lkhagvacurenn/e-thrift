@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>List an Item - eThrift</title>
+  <link rel="stylesheet" href="list-item.css" />
+</head>
+<body>
+
+  <main class="list-item-container">
+    <h1>List an Item</h1>
+
+    <form class="list-form">
+      <div class="form-section photo-grid">
+        <label class="photo-label">Photos</label>
+        <p class="photo-subtext">Add up to 4 photos</p>
+
+        <div class="photo-boxes">
+          <label class="photo-box upload-box">
+            <input type="file" accept="image/*" hidden>
+            <span>Cover photo</span>
+          </label>
+
+          <label class="photo-box upload-box">
+            <input type="file" accept="image/*" hidden>
+            <span>Front</span>
+          </label>
+
+          <label class="photo-box upload-box">
+            <input type="file" accept="image/*" hidden>
+            <span>Back</span>
+          </label>
+
+          <label class="photo-box upload-box">
+            <input type="file" accept="image/*" hidden>
+            <span>Detail</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <label for="title">Title</label>
+        <input type="text" id="title" placeholder="e.g. Black vintage jacket" required>
+      </div>
+
+      <div class="form-section">
+        <label for="description">Description</label>
+        <textarea id="description" rows="5" placeholder="Describe your item in detail" required></textarea>
+      </div>
+
+      <div class="form-section">
+        <label for="category">Category</label>
+        <select id="category" required>
+          <option value="">Select</option>
+          <option>Womenswear</option>
+          <option>Menswear</option>
+          <option>Footwear</option>
+          <option>Accessories</option>
+        </select>
+      </div>
+
+      <div class="form-section">
+        <label for="subcategory">Subcategory</label>
+        <select id="subcategory" required>
+          <option value="">Select</option>
+          <option>Shirts</option>
+          <option>Jackets</option>
+          <option>Pants</option>
+          <option>Shoes</option>
+          <option>Jewelry</option>
+        </select>
+      </div>
+
+      <div class="form-section">
+        <label for="condition">Condition</label>
+        <select id="condition" required>
+          <option value="">Select</option>
+          <option>New</option>
+          <option>Like New</option>
+          <option>Good</option>
+          <option>Used</option>
+          <option>Heavily Used</option>
+        </select>
+      </div>
+
+      <div class="form-section">
+        <label for="size">Size</label>
+        <input type="text" id="size" placeholder="e.g. M / 38 / 8.5" required>
+      </div>
+
+      <div class="form-section">
+        <label for="location">Location</label>
+        <input type="text" id="location" placeholder="e.g. Ulaanbaatar, Mongolia" required>
+      </div>
+
+      <div class="form-section">
+        <label for="price">Price (₮)</label>
+        <input type="number" id="price" placeholder="e.g. 30000" required>
+      </div>
+
+      <button type="submit" class="submit-btn">List Item</button>
+    </form>
+  </main>
+
+</body>
+</html>

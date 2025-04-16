@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="post.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="category.css">
 </head>
 <body>
+  <!-- Header -->
     <header class="header">
         <div class="top-header">
             <div class="logo">
@@ -122,228 +123,239 @@
                 </li>
             </ul>
         </div>
-    </header>
-     <!-- Hero Section -->
-  <section class="hero-section">
-    <div class="hero-box-1">
-      <a href="./form.html"  class="hero-btn">Sell Now</a>
-    </div>
-    <div class="hero-box-2">
-      <a class="hero-btn" >Buy Now</a>
-    </div>
-  </section>
-   <!-- Main Content -->
-  <div class="main-container">
-    <section id="shop-by-category">
-      <div class="category-grid">
-        <div class="category-card">
-          <img src="public/shoes.jpg" alt="Shoes" />
-          <h3>Shoes</h3>
-        </div>
-        <div class="category-card">
-          <img src="public/jeans.jpg" alt="Jeans" />
-          <h3>Jeans</h3>
-        </div>
-        <div class="category-card">
-          <img src="public/accessories.jpg" alt="Accessories" />
-          <h3>Accessories</h3>
-        </div>
-        <div class="category-card">
-          <img src="public/backpack.jpg" alt="Backpack" />
-          <h3>Backpack</h3>
-        </div>
-        <div class="category-card">
-          <img src="public/dress.png" alt="Outfit" />
-          <h3>Dress</h3>
-        </div>
-        <div class="category-card">
-          <img src="public/dress.png" alt="Dress" />
-          <h3>Dress</h3>
-        </div>
-      </div>
-    </section>
-    <!-- Shop by Brand -->
-    <section class="banner">
-      <h1>Shop by Brand</h1>
-      <div class="slider" style="--quantity: 10">
-        <div class="item" style="--position:1"><a href="./profile.html"><img src="public/adidas.png" alt=""></a></div>
-        <div class="item" style="--position:2"><a href=""><img src="public/hermes.png" alt=""></a></div>
-        <div class="item" style="--position:3"><a href=""><img src="public/nike.png" alt=""></a></div>
-        <div class="item" style="--position:4"><a href=""><img src="public/hnm.png" alt=""></a></div>
-        <div class="item" style="--position:5"><a href=""><img src="public/hermes.png" alt=""></a></div>
-        <div class="item" style="--position:6"><a href=""><img src="public/zara.png" alt=""></a></div>
-        <div class="item" style="--position:7"><a href=""><img src="public/ralphlauren.png" alt=""></a></div>
-        <div class="item" style="--position:8"><a href=""><img src="public/versace.png" alt=""></a></div>
-        <div class="item" style="--position:9"><a href=""><img src="public/michaelkors.png" alt=""></a></div>
-        <div class="item" style="--position:10"><a href=""><img src="public/nike.png" alt=""></a></div>
-      </div>
-    </section>
-    <!-- Shop by Price -->
-    <section  id="shop-by-price">
-      <h1>Shop by Price</h1>
-      <div class="price-slider-container">
-        <div class="range-labels">
-          <span>10,000₮</span>
-          <span>10,000₮</span>
-          <span>500,000₮</span>
-        </div>
-        <input type="range" min="10000" max="500000" step="10000" value="10000" class="price-slider">
-      </div>
-      <a href="">view more</a>
-      <div class="category-grid">
+    </header>  
+    <div class="main-container">
+      <section id="shop-by-category">
+        <h1 >Women's clothing</h1>
+        <div class="category-grid">
           <div class="category-card">
             <img src="public/shoes.jpg" alt="Shoes" />
-            <h3>10,000₮</h3>
+            <h3>Shoes</h3>
           </div>
           <div class="category-card">
             <img src="public/jeans.jpg" alt="Jeans" />
-            <h3>10,000₮</h3>
+            <h3>Jeans</h3>
           </div>
           <div class="category-card">
             <img src="public/accessories.jpg" alt="Accessories" />
-            <h3>10,000₮</h3>
+            <h3>Accessories</h3>
           </div>
           <div class="category-card">
             <img src="public/backpack.jpg" alt="Backpack" />
-            <h3>10,000₮</h3>
+            <h3>Backpack</h3>
           </div>
           <div class="category-card">
             <img src="public/dress.png" alt="Outfit" />
-            <h3>10,000₮</h3>
+            <h3>Dress</h3>
           </div>
           <div class="category-card">
-              <img src="public/shoes.jpg" alt="Shoes" />
-              <h3>10,000₮</h3>
+            <img src="public/dress.png" alt="Dress" />
+            <h3>Dress</h3>
           </div>
         </div>
+      </section>
+      
+    <section>
+      <div class="filter-sort-container">
+        <div class="filter">
+        <div class="filter-item">
+          <select id="category">
+            <option value="all">Category</option>
+            <option value="clothing">Clothing</option>
+            <option value="shoes">Shoes</option>
+            <option value="accessories">Accessories</option>
+          </select>
+        </div>
+        <div class="filter-item">
+          <select id="subcategory">
+            <option value="all">Subcategory</option>
+            <option value="clothing">Clothing</option>
+            <option value="shoes">Shoes</option>
+            <option value="accessories">Accessories</option>
+          </select>
+        </div>
+        <div class="filter-item">
+          <select id="category">
+            <option value="brand">Brand</option>
+            <option value="clothing">Gucci</option>
+            <option value="shoes">Zara</option>
+            <option value="accessories">Adidas</option>
+          </select>
+        </div>
+        <div class="price-filter">
+            <button class="price-toggle">Price</button>
+            <div class="price-inputs">
+              <input type="number" placeholder="Min ₮">
+              <span>–</span>
+              <input type="number" placeholder="Max ₮">
+            </div>
+        </div>
+        
+        
+        <div class="filter-item">
+          <select id="category">
+            <option value="all">Condition</option>
+            <option value="new">New</option>
+            <option value="old">Old</option>
+          </select>
+        </div>
+        <div class="filter-item">
+          <select id="size" >
+            <option value="all">Size</option>
+            <option value="s">S</option>
+            <option value="m">M</option>
+            <option value="l">L</option>
+          </select>
+        </div>
+      </div>
+      <div class="filter-mobile">
+        <svg  width="16" height="16" fill="currentColor"  viewBox="0 0 16 16">
+          <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2z"/>
+        </svg>
+        <select>
+          <option hidden selected>Filter</option>
+          <option value="clothing">Clothing</option>
+          <option value="shoes">Shoes</option>
+          <option value="accessories">Accessories</option>
+        </select>
+      </div>
+      <div class="sort">
+        <svg  width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5m-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5"/>
+        </svg>
+          <select >
+            <option hidden selected>Sort</option>
+            <option value="newest">Newest</option>
+            <option value="price-low-high">Price: Low to High</option>
+            <option value="price-high-low">Price: High to Low</option>
+          </select>
+      </div>
+      </div>
+      
+      <div class="post-content">
+        <a href="./product.html" class="post-card">
+            <img src="./public/dress.png" alt="dress">
+            <div class="card-buttom">
+                <div class="post-info">
+                    <h4>white dress</h4>
+                    <h5>1000,000₮</h5>
+                </div>
+                    <svg   fill="currentColor"  viewBox="0 0 16 16">
+                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                    </svg>
+            </div>
+        </a>
+        <a href="./product.html" class="post-card">
+            <img src="./public/top.png" alt="dress">
+            <div class="card-buttom">
+                <div class="post-info">
+                    <h4>white dress</h4>
+                    <h5>1000,000₮</h5>
+                </div>
+                    <svg   fill="currentColor"  viewBox="0 0 16 16">
+                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                    </svg>
+            </div>
+        </a>
+        <div class="post-card">
+            <img src="./public/dress.png" alt="dress">
+            <div class="card-buttom">
+                <div class="post-info">
+                    <h4>white dress</h4>
+                    <h5>1000,000₮</h5>
+                </div>
+                    <svg   fill="currentColor"  viewBox="0 0 16 16">
+                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                    </svg>
+            </div>
+        </div>
+        <div class="post-card">
+            <img src="./public/dress.png" alt="dress">
+            <div class="card-buttom">
+                <div class="post-info">
+                    <h4>white dress</h4>
+                    <h5>1000,000₮</h5>
+                </div>
+                    <svg   fill="currentColor"  viewBox="0 0 16 16">
+                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                    </svg>
+            </div>
+        </div>
+        <div class="post-card">
+            <img src="./public/dress.png" alt="dress">
+            <div class="card-buttom">
+                <div class="post-info">
+                    <h4>white dress</h4>
+                    <h5>1000,000₮</h5>
+                </div>
+                    <svg   fill="currentColor"  viewBox="0 0 16 16">
+                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                    </svg>
+            </div>
+        </div>
+        <div class="post-card">
+          <img src="./public/dress.png" alt="dress">
+          <div class="card-buttom">
+              <div class="post-info">
+                  <h4>white dress</h4>
+                  <h5>1000,000₮</h5>
+              </div>
+                  <svg   fill="currentColor"  viewBox="0 0 16 16">
+                      <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                  </svg>
+          </div>
+      </div>
+      <div class="post-card">
+            <img src="./public/dress.png" alt="dress">
+            <div class="card-buttom">
+                <div class="post-info">
+                    <h4>white dress</h4>
+                    <h5>1000,000₮</h5>
+                </div>
+                    <svg   fill="currentColor"  viewBox="0 0 16 16">
+                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                    </svg>
+            </div>
+        </div>
+        <div class="post-card">
+          <img src="./public/dress.png" alt="dress">
+          <div class="card-buttom">
+              <div class="post-info">
+                  <h4>white dress</h4>
+                  <h5>1000,000₮</h5>
+              </div>
+                  <svg   fill="currentColor"  viewBox="0 0 16 16">
+                      <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                  </svg>
+          </div>
+        </div>
+        <div class="post-card">
+          <img src="./public/dress.png" alt="dress">
+          <div class="card-buttom">
+              <div class="post-info">
+                  <h4>white dress</h4>
+                  <h5>1000,000₮</h5>
+              </div>
+                  <svg   fill="currentColor"  viewBox="0 0 16 16">
+                      <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                  </svg>
+          </div>
+        </div>
+        <div class="post-card">
+          <img src="./public/dress.png" alt="dress">
+          <div class="card-buttom">
+              <div class="post-info">
+                  <h4>white dress</h4>
+                  <h5>1000,000₮</h5>
+              </div>
+                  <svg   fill="currentColor"  viewBox="0 0 16 16">
+                      <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                  </svg>
+          </div>
+        </div>
+    </div> 
     </section>
-  <section id="popular-this-week">
-    <h1>Popular this week</h1>
-    <div class="post-content">
-      <a href="./product.html" class="post-card">
-          <img src="./public/dress.png" alt="dress">
-          <div class="card-buttom">
-              <div class="post-info">
-                  <h4>white dress</h4>
-                  <h5>1000,000₮</h5>
-              </div>
-                  <svg   fill="currentColor"  viewBox="0 0 16 16">
-                      <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
-                  </svg>
-          </div>
-      </a>
-      <a href="./product.html" class="post-card">
-          <img src="./public/top.png" alt="dress">
-          <div class="card-buttom">
-              <div class="post-info">
-                  <h4>white dress</h4>
-                  <h5>1000,000₮</h5>
-              </div>
-                  <svg   fill="currentColor"  viewBox="0 0 16 16">
-                      <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
-                  </svg>
-          </div>
-      </a>
-      <div class="post-card">
-          <img src="./public/dress.png" alt="dress">
-          <div class="card-buttom">
-              <div class="post-info">
-                  <h4>white dress</h4>
-                  <h5>1000,000₮</h5>
-              </div>
-                  <svg   fill="currentColor"  viewBox="0 0 16 16">
-                      <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
-                  </svg>
-          </div>
-      </div>
-      <div class="post-card">
-          <img src="./public/dress.png" alt="dress">
-          <div class="card-buttom">
-              <div class="post-info">
-                  <h4>white dress</h4>
-                  <h5>1000,000₮</h5>
-              </div>
-                  <svg   fill="currentColor"  viewBox="0 0 16 16">
-                      <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
-                  </svg>
-          </div>
-      </div>
-      <div class="post-card">
-          <img src="./public/dress.png" alt="dress">
-          <div class="card-buttom">
-              <div class="post-info">
-                  <h4>white dress</h4>
-                  <h5>1000,000₮</h5>
-              </div>
-                  <svg   fill="currentColor"  viewBox="0 0 16 16">
-                      <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
-                  </svg>
-          </div>
-      </div>
-      <div class="post-card">
-        <img src="./public/dress.png" alt="dress">
-        <div class="card-buttom">
-            <div class="post-info">
-                <h4>white dress</h4>
-                <h5>1000,000₮</h5>
-            </div>
-                <svg   fill="currentColor"  viewBox="0 0 16 16">
-                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
-                </svg>
-        </div>
     </div>
-    <div class="post-card">
-          <img src="./public/dress.png" alt="dress">
-          <div class="card-buttom">
-              <div class="post-info">
-                  <h4>white dress</h4>
-                  <h5>1000,000₮</h5>
-              </div>
-                  <svg   fill="currentColor"  viewBox="0 0 16 16">
-                      <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
-                  </svg>
-          </div>
-      </div>
-      <div class="post-card">
-        <img src="./public/dress.png" alt="dress">
-        <div class="card-buttom">
-            <div class="post-info">
-                <h4>white dress</h4>
-                <h5>1000,000₮</h5>
-            </div>
-                <svg   fill="currentColor"  viewBox="0 0 16 16">
-                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
-                </svg>
-        </div>
-      </div>
-      <div class="post-card">
-        <img src="./public/dress.png" alt="dress">
-        <div class="card-buttom">
-            <div class="post-info">
-                <h4>white dress</h4>
-                <h5>1000,000₮</h5>
-            </div>
-                <svg   fill="currentColor"  viewBox="0 0 16 16">
-                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
-                </svg>
-        </div>
-      </div>
-      <div class="post-card">
-        <img src="./public/dress.png" alt="dress">
-        <div class="card-buttom">
-            <div class="post-info">
-                <h4>white dress</h4>
-                <h5>1000,000₮</h5>
-            </div>
-                <svg   fill="currentColor"  viewBox="0 0 16 16">
-                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
-                </svg>
-        </div>
-      </div>
-  </div> 
-  </section>
-  </div>
-  
   <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-container">

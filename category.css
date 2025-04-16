@@ -1,0 +1,122 @@
+.main-container section{
+    padding:10px 20px;
+    justify-items: flex-start;
+}
+.main-container {
+    max-width: 1280px;
+    justify-items: center;
+    margin: auto;
+}
+.main-container h1{
+    font-size: 1.8rem;
+}
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+    padding-top: 10px;
+}
+.category-card {
+    background: transparent;
+    overflow: hidden;
+    text-align: center;
+}
+.category-card h3 {
+    font-size: 1rem;
+}
+.category-card img {
+    width: 100%;
+    aspect-ratio:1;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.category-card:hover {
+    transform: scale(1.03);
+}
+
+#shop-by-category {
+    border-bottom: solid var(--line-color);
+}
+
+.filter-sort-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.filter{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.filter-item{
+    padding: 2px 10px;
+    border-radius: 10px;
+    border:1px solid var(--line-color);
+    background: transparent;
+}
+.filter-mobile{
+    display: none;
+    padding: 2px 10px;
+    border-radius: 10px;
+    border:1px solid var(--line-color);
+    background: transparent;
+}
+.sort{
+    padding: 2px 10px;
+    border-radius: 10px;
+    border:1px solid var(--line-color);
+    background: transparent;
+}
+
+select{
+    border: none;
+}
+select:focus{
+    outline: none;
+}  
+
+.price-filter {
+    position: relative;
+  }
+  .price-toggle {
+    padding: 4px 10px;
+    border: 1px solid var(--line-color);
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .price-inputs {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    display: none;
+    border: 1px solid var(--line-color);
+    padding: 0.5rem;
+    border-radius: 8px;
+    z-index: 999;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .price-filter:hover .price-inputs {
+    display: flex;
+  }
+  
+  .price-inputs input {
+    width: 80px;
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
+  }
+  
+@media (max-width: 1024px) {
+    .filter-sort-container{
+        justify-content: center;
+        gap: 10px;
+    }
+    .filter-mobile{
+        display: block;
+    }
+    .filter{
+        display: none;
+    }
+}

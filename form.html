@@ -3,52 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>List an Item - eThrift</title>
-  <link rel="stylesheet" href="list-item.css" />
+  <title>forms</title>
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="form.css" />
 </head>
 <body>
-
-  <main class="list-item-container">
-    <h1>List an Item</h1>
-
+  <main class="main-form-container">
+    <div class="ads"></div>
+    <div class="list-item-container" >
+       <h1>Зар нэмэх</h1>
     <form class="list-form">
-      <div class="form-section photo-grid">
+      <div class="photo-section">
         <label class="photo-label">Photos</label>
-        <p class="photo-subtext">Add up to 4 photos</p>
-
-        <div class="photo-boxes">
-          <label class="photo-box upload-box">
+          <label class="photo-box">
             <input type="file" accept="image/*" hidden>
-            <span>Cover photo</span>
+            <svg  width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+              <path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708z"/>
+            </svg>
+            <p class="photo-subtext">4 хүртэлх зураг оруулна уу.</p>
           </label>
-
-          <label class="photo-box upload-box">
-            <input type="file" accept="image/*" hidden>
-            <span>Front</span>
-          </label>
-
-          <label class="photo-box upload-box">
-            <input type="file" accept="image/*" hidden>
-            <span>Back</span>
-          </label>
-
-          <label class="photo-box upload-box">
-            <input type="file" accept="image/*" hidden>
-            <span>Detail</span>
-          </label>
-        </div>
       </div>
-
-      <div class="form-section">
-        <label for="title">Title</label>
-        <input type="text" id="title" placeholder="e.g. Black vintage jacket" required>
-      </div>
-
-      <div class="form-section">
-        <label for="description">Description</label>
-        <textarea id="description" rows="5" placeholder="Describe your item in detail" required></textarea>
-      </div>
-
       <div class="form-section">
         <label for="category">Category</label>
         <select id="category" required>
@@ -90,18 +65,17 @@
       </div>
 
       <div class="form-section">
-        <label for="location">Location</label>
-        <input type="text" id="location" placeholder="e.g. Ulaanbaatar, Mongolia" required>
-      </div>
-
-      <div class="form-section">
         <label for="price">Price (₮)</label>
         <input type="number" id="price" placeholder="e.g. 30000" required>
       </div>
-
-      <button type="submit" class="submit-btn">List Item</button>
+      <div class="form-section">
+        <label for="description">Description</label>
+        <textarea id="description" rows="5" placeholder="Describe your item in detail" required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Нийтлэх</button>
     </form>
+    </div>
+   
   </main>
-
 </body>
 </html>

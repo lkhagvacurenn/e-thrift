@@ -1,12 +1,11 @@
 .header-top-nav{
     padding: var(--space-md) var(--space-lg);
     border-bottom: var(--border-solid);
+    
 }
-
 .header-top{
     display: flex;
     align-items:center;
-    width: 100%;
 }
 .logo-container{
     margin-right: var(--space-md);
@@ -60,6 +59,7 @@
 .header-cat-nav{
     padding: 0 var(--space-lg);
     background-color: var(--primary-color);
+    
 }
 
 .cat-list {
@@ -68,6 +68,7 @@
     flex-direction: row;
     width: fit-content;
     background-color: inherit;
+    z-index: 9999;
 }
 .cat-item {
     padding: var(--space-md);

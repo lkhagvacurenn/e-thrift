@@ -37,14 +37,14 @@
     --search-svg-size: 1.4rem;
   
     /* Colors */
-    --background-color: white;
+    --background-color: #F6F0F0;
     --primary-color: #158c60;
     --hover-color: #0E6C49;
     --text-color: black;
     --line-color: black;
     --card-color: rgb(233, 227, 227);
     --card-text-color: black;
-    --dropdown-color: #1E1E1E;
+    --dropdown-color: #F6F0F0;
     --link-color: rgb(46, 46, 238);
     --warning-color: #FF0000;
   
@@ -66,7 +66,7 @@
         --background-color:black;
         --text-color:white;
         --line-color:white;
-        --dropdown-color:#1E1E1E;
+        --dropdown-color:#858282;
     }
 }
 svg{

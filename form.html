@@ -9,72 +9,72 @@
 </head>
 <body>
   <main class="main-form-container">
-    <div class="ads"></div>
-    <div class="list-item-container" >
+    <figure class="ads"></figure>
+    <section class="list-item-container" >
        <h1>Зар нэмэх</h1>
-    <form class="list-form">
-      <div class="photo-section">
-        <label class="photo-label">Photos</label>
-          <label class="photo-box">
-            <input type="file" accept="image/*" hidden>
-            <svg  width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
-              <path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708z"/>
-            </svg>
-            <p class="photo-subtext">4 хүртэлх зураг оруулна уу.</p>
-          </label>
-      </div>
-      <div class="form-section">
-        <label for="category">Category</label>
-        <select id="category" required>
-          <option value="">Select</option>
-          <option>Womenswear</option>
-          <option>Menswear</option>
-          <option>Footwear</option>
-          <option>Accessories</option>
-        </select>
-      </div>
+      <form class="list-form">
+        <li class="photo-section">
+          <label class="photo-label">Photos</label>
+            <label class="photo-box">
+              <input type="file" accept="image/*" hidden>
+              <svg  width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                <path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708z"/>
+              </svg>
+              <p class="photo-subtext">4 хүртэлх зураг оруулна уу.</p>
+            </label>
+        </li>
+        <li class="form-section">
+          <label for="category">Category</label>
+          <select id="category" required>
+            <option value="">Select</option>
+            <option>Womenswear</option>
+            <option>Menswear</option>
+            <option>Footwear</option>
+            <option>Accessories</option>
+          </select>
+        </li>
 
-      <div class="form-section">
-        <label for="subcategory">Subcategory</label>
-        <select id="subcategory" required>
-          <option value="">Select</option>
-          <option>Shirts</option>
-          <option>Jackets</option>
-          <option>Pants</option>
-          <option>Shoes</option>
-          <option>Jewelry</option>
-        </select>
-      </div>
+        <li class="form-section">
+          <label for="subcategory">Subcategory</label>
+          <select id="subcategory" required>
+            <option value="">Select</option>
+            <option>Shirts</option>
+            <option>Jackets</option>
+            <option>Pants</option>
+            <option>Shoes</option>
+            <option>Jewelry</option>
+          </select>
+        </li>
 
-      <div class="form-section">
-        <label for="condition">Condition</label>
-        <select id="condition" required>
-          <option value="">Select</option>
-          <option>New</option>
-          <option>Like New</option>
-          <option>Good</option>
-          <option>Used</option>
-          <option>Heavily Used</option>
-        </select>
-      </div>
+        <li class="form-section">
+          <label for="condition">Condition</label>
+          <select id="condition" required>
+            <option value="">Select</option>
+            <option>New</option>
+            <option>Like New</option>
+            <option>Good</option>
+            <option>Used</option>
+            <option>Heavily Used</option>
+          </select>
+        </li>
 
-      <div class="form-section">
-        <label for="size">Size</label>
-        <input type="text" id="size" placeholder="e.g. M / 38 / 8.5" required>
-      </div>
+        <li class="form-section">
+          <label for="size">Size</label>
+          <input type="text" id="size" placeholder="e.g. M / 38 / 8.5" required>
+        </li>
 
-      <div class="form-section">
-        <label for="price">Price (₮)</label>
-        <input type="number" id="price" placeholder="e.g. 30000" required>
-      </div>
-      <div class="form-section">
-        <label for="description">Description</label>
-        <textarea id="description" rows="5" placeholder="Describe your item in detail" required></textarea>
-      </div>
-      <button type="submit" class="submit-btn">Нийтлэх</button>
-    </form>
-    </div>
+        <li class="form-section">
+          <label for="price">Price (₮)</label>
+          <input type="number" id="price" placeholder="e.g. 30000" required>
+        </li>
+        <li class="form-section">
+          <label for="description">Description</label>
+          <textarea id="description" rows="5" placeholder="Describe your item in detail" required></textarea>
+        </li>
+        <button type="submit" class="submit-btn">Нийтлэх</button>
+      </form>
+    </section>
    
   </main>
 </body>

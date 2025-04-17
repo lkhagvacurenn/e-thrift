@@ -1,58 +1,58 @@
 .main-container{
-    max-width: 1280px;
+    max-width: var(--max-width-7xl);
     justify-content: center;
     margin: 0 auto;
-    padding: 20px 20px;
+    padding: var(--space-md) var(--space-md);
 }
 .profile-header{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    max-width: 400px;
-    gap: 10px;
-    padding-bottom: 10px;
+    max-width: 25rem;
+    gap: var(--space-md);
+    padding-bottom: var(--space-md);
 }
 .product-profile-img{
-    width: 50px;
+    width: var(--mobile-avatar-lg);
     aspect-ratio: 1;
     border-radius: 50%;
-    border: 1px solid var(--line-color);
+    border: var(--border-solid);
 }
 .three-dots{
     margin-left: auto; /*zuun talruu shahaw*/
 }
 .product-container{
     display: flex;
-    gap: 30px;
+    gap: var(--space-lg);
 }
 .product-container .product-image{
     width: 100%;
-    max-width: 400px;
+    max-width: 25rem;
     aspect-ratio: 1;
     object-fit: cover;
-    border-radius: 10px;
-    border: 1px solid var(--line-color);
+    border-radius: var(--space-md);
+    border: var(--border-solid);
     margin-right: auto;
 }
 .product-info-container{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: var(--space-lg);
     width: 100%;
 }
 .product-info{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-    gap: 20px;
+    gap: var(--space-lg);
 }
 .product-description p{
-    border: 1px solid var(--line-color);
-    padding: 5px;
-    border-radius: 10px;
+    border: var(--border-solid);
+    padding: var(--space-sm);
+    border-radius: var(--space-md);
 }
 .product-essential-info{
     display: flex;
-    gap: 10px;
+    gap: var(--space-md);
     align-items: center;
 }
 .warning {
@@ -61,15 +61,25 @@
 .button-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap:20px;
+    gap:var(--space-lg);
 }
 .product-btn{
     width: 100%;
     background-color: var(--primary-color);
-    border-radius:10px ;
+    border-radius:var(--border-radius-sm) ;
     border: none;
-    padding: 10px 0;
+    padding: var(--border-radius-sm) 0;
     font-weight: bold;
+    text-align: center;
+}
+.product-btn:hover{
+    background-color: var(--hover-color);
+}
+.more-products{
+    margin-top: var(--space-lg);
+    h1{
+     font-size: 1.4rem;
+    }
 }
 @media (max-width:768px){
     .product-container{

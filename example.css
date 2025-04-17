@@ -1,0 +1,49 @@
+section{
+    max-width: 1280px;
+}
+.post-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 180px);
+    gap: 20px;
+    padding-top: 30px;
+  }
+  .post-card{ 
+    display: flex;
+    flex-direction: column;
+    max-width: 220px;
+    width: 100%;
+    height: 250px;
+    background-color: transparent;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    aspect-ratio: 1;
+  }
+  .post-card img{
+    border-radius: 10px;
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+  }
+
+.card-bottom{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    height: 20%;
+}
+h4 {
+    flex-basis: 100%;
+    background-color: inherit;
+    font-size:0.9rem;
+}
+ h5{
+    flex:1;
+    background-color: inherit;
+    font-size: 0.8rem;
+}
+ svg {
+    width: 16px;
+    height: 16px;
+}
+

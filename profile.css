@@ -1,6 +1,11 @@
 .container{
-    margin:var(--space-lg) auto;
+    display: flex;
+    min-height: 100vh;
+}
+.profile-container{
+    margin:var(--space-md) auto;
     max-width: var( --max-width-7xl);
+    width: 100%;
 }
 .profile-section{
     margin:0 var(--space-md);
@@ -94,4 +99,8 @@
     justify-content: center;
 }
 
-  
+@media (max-width:768px) {
+    .container{
+        display: block;
+    }
+}

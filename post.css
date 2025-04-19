@@ -1,8 +1,8 @@
 .post-content{
-  width: 100%;
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit,18%);
-    gap:2%;
+    grid-template-columns: repeat(5,1fr);
+    gap:0.6rem;
     padding-top: var(--space-md);
 
   }
@@ -41,11 +41,11 @@
 
 @media (max-width:1024px) {
   .post-content{
-    grid-template-columns: repeat(auto-fit,31.3%);
+    grid-template-columns: repeat(4,1fr);
   }
 }
 @media (max-width:768px) {
   .post-content{
-    grid-template-columns: repeat(auto-fit,48%);
+    grid-template-columns: repeat(2,1fr);
   }
 }

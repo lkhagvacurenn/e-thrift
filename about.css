@@ -1,0 +1,303 @@
+.about-page .hero-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, var(--background-color), var(--card-color));
+}
+
+.about-page .hero-content {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 2rem;
+  border-radius: var(--border-radius-md);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.about-page .hero-content h1 {
+  margin-bottom: 1rem;
+  font-size: 2.75rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.about-page .hero-content p {
+  margin-bottom: 2rem;
+  font-size: 1.25rem;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.about-page .hero-button {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.about-page .hero-button:hover {
+  background-color: var(--hover-color);
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 { font-size: 2rem; }
+  .hero-content p { font-size: 1rem; }
+}
+
+.feature-section,
+.about-page .feature-section.alt {
+  padding: 4rem 1rem;
+  background-color: var(--card-color);
+}
+
+.about-page .feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: center;
+}
+.about-page .feature-grid.reverse {
+  direction: rtl;
+}
+.about-page .feature-grid.reverse > * {
+  direction: ltr;
+}
+
+.about-page .feature-image img {
+  width: 100%;
+  border-radius: var(--border-radius-sm);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.about-page .feature-text h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.about-page .feature-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.about-page .impact-section {
+  margin-bottom: 0;
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: var(--background-color);
+}
+
+.about-page .impact-title {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.about-page .impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-page .impact-item {
+  padding: 2rem;
+  border-radius: var(--border-radius-sm);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease;
+}
+
+.about-page .impact-item:hover {
+  transform: translateY(-5px);
+}
+
+.about-page .impact-item svg {
+  width: 64px;
+  height: 64px;
+  aspect-ratio: 1 / 1;
+  display: block;
+  margin: 0 auto 1rem auto;
+  fill: var(--primary-color);
+}
+
+.about-page .impact-item h3 {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.about-page .impact-item p {
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+.about-page .impact-second {
+  margin-top: -2rem;
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(to bottom, var(--background-color), var(--card-color));
+}
+
+.about-page .impact-story {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.about-page .impact-visual img {
+  max-width: 300px;
+  margin-right: 2rem;
+  max-width: 300px;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.about-page .impact-text h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.about-page .impact-text {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  text-align: center; 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.impact-transition {
+  font-size: 1.15rem;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.75;
+  color: var(--text-color);
+  text-align: center;
+  margin: 1.5rem auto 1rem;
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.4); 
+  padding: 1rem 1.5rem;
+  border-left: 4px solid var(--primary-color);
+  border-radius: var(--border-radius-sm);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.03);
+}
+
+.about-page .impact-action .cta-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 2rem;
+  transition: background-color 0.3s ease;
+}
+
+.about-page .impact-action .cta-button:hover {
+  background-color: var(--hover-color);
+}
+
+.about-page .faq-section {
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-page .faq-title {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.about-page .accordion-item {
+  background-color: var(--card-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+  margin-bottom: 1rem;
+}
+
+.about-page .accordion-question {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--primary-color);
+  border: none;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: var(--card-color);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.about-page .accordion-question:hover {
+  background-color: #f0fdfa;
+}
+
+.about-page .accordion-answer {
+  padding: 0 1.25rem;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease, padding 0.3s ease;
+}
+
+.about-page .accordion-answer.open {
+  height: auto;
+  padding: 1rem 1.25rem;
+}
+
+.about-page .impact-right {
+  flex: 1;
+  min-width: 320px;
+  max-width: 600px;
+  background-color: var(--card-color);
+  padding: 2rem;
+  border-radius: var(--border-radius-sm);
+}
+
+.about-page .impact-right h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.about-page .impact-right p {
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 1.6;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.about-page .impact-right img {
+  max-width: 100%;
+  margin-top: 2rem;
+  animation: float 4s ease-in-out infinite;
+}
